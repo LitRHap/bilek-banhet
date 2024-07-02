@@ -105,7 +105,7 @@ export default function CekBrainrot() {
             <div className="flew flex-row">
               <div>
                 <p className="mb-4 text-2xl font-semibold">
-                  Masukkan Namamu
+                  Masukkan Namamuu
                 </p>
                 <input
                   className="border-2 p-4 border-red-800"
