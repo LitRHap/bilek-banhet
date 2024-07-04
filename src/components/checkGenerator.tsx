@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import styles from "./checkGenerator.module.css";
 import { motion } from "framer-motion";
 import listData from "../data/listData";
 import { useState } from "react";
@@ -103,13 +102,13 @@ export default function CekBrainrot() {
         initial="open"
         animate={isOpen ? "close" : "open"}
       >
-        <div className="px-3 flex flex-col items-center justify-center">
-          <div className="px-8 sm:top-[-3rem] md:top-[0rem] flex items-center justify-center drop-shadow-lg pointer-events-none">
+        <div className="relative px-3 flex flex-col items-center justify-center">
+          <div className="px-8 sm:mt-12 xl:mt-20 flex items-center justify-center drop-shadow-lg pointer-events-none">
             <Image
               src="/img/logo.png"
               alt="logo"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
             />
           </div>
           <div className="pointer-events-none text-center sm:text-sm md:text-xl mb-8">
@@ -119,50 +118,58 @@ export default function CekBrainrot() {
             </a>
           </div>
 
-          <div className="pb-9 relative rounded-t-3xl rounded-b-2xl bg-gradient-to-t from-[#4d739e] to-[#89a4c7] border-[5px] border-blue-900 drop-shadow-xl">
-            <div className="sm:p-3 md:p-6 rounded-2xl sm:w-[80vw] md:w-[40rem]   bg-gradient-to-t from-[#6899d2] to-[#a9c7ed]">
-              <div className="mb-10 bg-white sm:p-3 md:p-4 rounded-2xl border-b-4 border-r-4 border-gray-300 shadow-md">
-                <p className="sm:text-[0.7rem] xl:text-[1rem] text-center">
-                  Tools ini akan mendeteksi namamu
-                  kemudian mengkalkulasikan
-                  seberapa brainrot dan banyak
-                  aura yang kamu punya fr fr no
-                  cap!
-                </p>
-              </div>
+          {/* BORDER STROKE */}
+          <div className="bg-black p-1 rounded-[1.3rem]">
+            {/* CONTENT */}
+            <div className="pb-9 relative rounded-t-3xl rounded-b-2xl bg-gradient-to-t from-[#4d739e] to-[#89a4c7] drop-shadow-xl">
+              <div className="sm:p-3 md:p-6 rounded-2xl sm:w-[80vw] md:w-[40rem]   bg-gradient-to-t from-[#6899d2] to-[#a9c7ed]">
+                <div className="mb-10 bg-white sm:p-3 md:p-4 rounded-2xl border-b-4 border-r-4 border-gray-300 shadow-md">
+                  <p className="sm:text-[0.7rem] xl:text-[1rem] text-center">
+                    Tools ini akan mendeteksi
+                    namamu kemudian
+                    mengkalkulasikan seberapa
+                    brainrot dan banyak aura yang
+                    kamu punya fr fr no cap!
+                  </p>
+                </div>
 
-              <div>
-                <div className="mb-4 sm:text-sm md:text-2xl font-semibold text-center">
-                  Masukkan Namamu
-                </div>
-                <div className="mb-6 flex items-center justify-center">
-                  <input
-                    value={namaUser}
-                    onChange={(e) =>
-                      setNamaUser(e.target.value)
-                    }
-                    className="input rounded-full px-8 py-3 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-500 shadow-md"
-                    placeholder="Slamet Kopling"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="relative flex items-center justify-center">
-              <button
-                className={`absolute cursor-pointer transition-all text-white px-6 py-2 rounded-lg border-b-[4px] 
+                <div>
+                  <div className="mb-4 sm:text-sm md:text-2xl font-semibold text-center">
+                    Masukkan Namamu
+                  </div>
+                  <form
+                    className="relative mb-6 flex flex-col items-center justify-center"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      randomList();
+                      setIsOpen(true);
+                    }}
+                  >
+                    <input
+                      value={namaUser}
+                      onChange={(e) =>
+                        setNamaUser(
+                          e.target.value
+                        )
+                      }
+                      className="input rounded-full px-8 py-3 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-500 shadow-md"
+                      placeholder="Slamet Kopling"
+                    />
+                    <button
+                      className={`absolute top-20 cursor-pointer transition-all text-white px-6 py-2 rounded-lg border-b-[4px] 
                     ${
                       !namaUser
                         ? "bg-gray-400 border-gray-500"
                         : "bg-blue-500 border-blue-600 hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
                     }`}
-                onClick={() => {
-                  randomList();
-                  setIsOpen(true);
-                }}
-                disabled={!namaUser} // Menambahkan validasi untuk mengaktifkan tombol hanya jika namaUser tidak kosong
-              >
-                Button
-              </button>
+                      disabled={!namaUser} // Menambahkan validasi untuk mengaktifkan tombol hanya jika namaUser tidak kosong
+                    >
+                      Button
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div className="relative flex items-center justify-center"></div>
             </div>
           </div>
         </div>
