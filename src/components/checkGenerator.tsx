@@ -9,6 +9,13 @@ import {
   variants3,
 } from "../components/framer-motion/variant";
 
+const audioFiles = [
+  "/audio/spin_sfx.WAV", // 0
+  "/audio/tier_bad.WAV", // 1
+  "/audio/tier_good.WAV", // 2
+  "/audio/tier_best.WAV", // 3
+];
+
 export default function CekBrainrot() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasilNama, setNama] = useState("");
@@ -18,13 +25,7 @@ export default function CekBrainrot() {
     useState(true);
 
   // fungsi play sfx
-  async function playSFX(indexSong: number) {
-    const audioFiles = [
-      "/audio/spin_sfx.WAV", // 0
-      "/audio/tier_bad.WAV", // 1
-      "/audio/tier_good.WAV", // 2
-      "/audio/tier_best.WAV", // 3
-    ];
+  function playSFX(indexSong: number) {
     const audio = new Audio(
       audioFiles[indexSong]
     );
