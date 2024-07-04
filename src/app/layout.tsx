@@ -3,7 +3,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import AppBgImg from "@/components/background";
 
-const inter = Lexend({ subsets: ["latin"] });
+const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,7 @@ export default function RootLayout({
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no"
       ></meta>
-      <body
-        className={`className="max-h-[100vh] w-full ${inter.className}`}
-      >
+      <body className={lexend.className}>
         <AppBgImg />
         {children}
       </body>

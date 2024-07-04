@@ -18,7 +18,7 @@ export default function CekBrainrot() {
     useState(true);
 
   // fungsi play sfx
-  function playSFX(indexSong: number) {
+  async function playSFX(indexSong: number) {
     const audioFiles = [
       "/audio/spin_sfx.WAV", // 0
       "/audio/tier_bad.WAV", // 1
