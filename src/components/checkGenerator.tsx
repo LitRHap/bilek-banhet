@@ -113,7 +113,11 @@ export default function CekBrainrot() {
           </div>
           <div className="pointer-events-none text-center sm:text-sm md:text-xl mb-8">
             Made by{" "}
-            <a className="pointer-events-auto">
+            <a
+              className="pointer-events-auto"
+              href="https://github.com/SirGhazian/"
+              target="_blank"
+            >
               @SirGhazian
             </a>
           </div>

@@ -5,7 +5,7 @@ import bgMobile from "../../public/img/background_mobile.png";
 export default function AppBgImg() {
   return (
     <main>
-      <div className="sm:collapse md:visible">
+      <div className="sm:collapse md:visible pointer-events-none">
         <Image
           src={bgDesktop}
           alt="background"
@@ -19,7 +19,7 @@ export default function AppBgImg() {
         />
       </div>
 
-      <div className="sm:visible md:collapse">
+      <div className="sm:visible md:collapse pointer-events-none">
         <Image
           src={bgMobile}
           alt="background"
