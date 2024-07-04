@@ -21,7 +21,9 @@ export default function RootLayout({
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no"
       ></meta>
-      <body className={inter.className}>
+      <body
+        className={`className="max-h-[100vh] w-full ${inter.className}`}
+      >
         <AppBgImg />
         {children}
       </body>
