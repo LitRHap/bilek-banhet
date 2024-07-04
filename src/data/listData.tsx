@@ -16,6 +16,7 @@ const listData = [
   { nama: "L rizzler", rarity: 60 },
   { nama: "skibidi toilet", rarity: 60 },
   { nama: "beta", rarity: 50 },
+  { nama: "delulu", rarity: 30 },
   { nama: "-10000 Aura", rarity: 0 },
 ];
 

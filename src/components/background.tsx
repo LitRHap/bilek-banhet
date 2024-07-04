@@ -24,7 +24,8 @@ export default function AppBgImg() {
           src={bgMobile}
           alt="background"
           style={{
-            height: "100%",
+            height: "100vh",
+            width: "100vw",
             objectFit: "cover",
             position: "absolute",
             zIndex: -1,
