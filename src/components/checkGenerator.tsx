@@ -8,12 +8,13 @@ import {
   variants2,
   variants3,
 } from "../components/framer-motion/variant";
+import TextStyle from "./textstyle";
 
 export default function ChekBrainrot() {
   const [isOpen, setIsOpen] = useState(false);
   const [resultName, setName] = useState("");
+  const [resultAura, setAura] = useState("");
   let [inputName, setInputName] = useState("");
-  const [resultRarity, setRarity] = useState(0);
   const [isClicked, setIsClicked] =
     useState(true);
 
@@ -73,18 +74,25 @@ export default function ChekBrainrot() {
         console.log(listData[random].name);
 
         setName(listData[random].name);
-        setRarity(listData[random].rarity);
-        hasilFinal = listData[random].rarity;
+        setAura(listData[random].aura + " Aura");
+
+        // convert string aura ke number
+        hasilFinal = Number(
+          listData[random].aura
+        );
       }
 
-      if (hasilFinal >= 95) {
+      if (hasilFinal >= 1000) {
+        // aura lebih dari 8000
         playSFX(3);
       } else if (
-        hasilFinal >= 80 &&
-        hasilFinal < 95
+        // aura lebih dari 100
+        hasilFinal >= 1 &&
+        hasilFinal <= 999
       ) {
         playSFX(2);
-      } else {
+      } else if (hasilFinal <= 0) {
+        // aura kurang dari 0
         playSFX(1);
       }
     }
@@ -124,7 +132,7 @@ export default function ChekBrainrot() {
           </div>
 
           {/* BORDER STROKE */}
-          <div className="bg-black p-1 rounded-[1.3rem]">
+          <div className="bg-black p-1 rounded-[1.3rem] drop-shadow-3xl">
             {/* CONTENT */}
             <div className="pb-9 relative rounded-t-3xl rounded-b-2xl bg-gradient-to-t from-[#4d739e] to-[#89a4c7] drop-shadow-xl">
               <div className="sm:p-3 md:p-6 rounded-2xl sm:w-[80vw] md:w-[40rem]   bg-gradient-to-t from-[#6899d2] to-[#a9c7ed]">
@@ -198,13 +206,15 @@ export default function ChekBrainrot() {
                 , kamu adalah:
               </p>
             </div>
-            <div className="h-8">
-              <p className="text-3xl">
-                {resultName.toUpperCase()}
-              </p>
+            <div className="h-8  mb-10">
+              <div className="text-3xl">
+                <TextStyle
+                  nameText={resultName.toUpperCase()}
+                />
+              </div>
             </div>
             <div className="h-8">
-              <p>{resultRarity}</p>
+              <p>{resultAura}</p>
             </div>
             <motion.div
               variants={variants3}

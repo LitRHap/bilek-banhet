@@ -13,7 +13,11 @@ const config: Config = {
       lg: "1024px",
       xl: "1280px",
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        "3xl": "2px 0px 0px rgba(0, 0, 0, 5)",
+      },
+    },
   },
   plugins: [],
 };

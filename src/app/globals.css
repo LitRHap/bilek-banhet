@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bangers {
+  font-family: var(--font-bangers);
+}
