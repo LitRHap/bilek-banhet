@@ -22,7 +22,7 @@ export default function RootLayout({
         content="width=device-width, initial-scale=1.0, user-scalable=no"
       ></meta>
       <body className={inter.className}>
-        <AppBgImg />
+        {/* <AppBgImg /> */}
         {children}
       </body>
     </html>
