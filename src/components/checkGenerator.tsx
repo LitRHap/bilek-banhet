@@ -9,11 +9,11 @@ import {
   variants3,
 } from "../components/framer-motion/variant";
 
-export default function CekBrainrot() {
+export default function ChekBrainrot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hasilNama, setNama] = useState("");
-  let [namaUser, setNamaUser] = useState("");
-  const [hasilRarity, setRarity] = useState(0);
+  const [resultName, setName] = useState("");
+  let [inputName, setInputName] = useState("");
+  const [resultRarity, setRarity] = useState(0);
   const [isClicked, setIsClicked] =
     useState(true);
 
@@ -70,9 +70,9 @@ export default function CekBrainrot() {
 
         // passing angka ke array agar dapat digunakan sebagai index data ke
         random = Number(random);
-        console.log(listData[random].nama);
+        console.log(listData[random].name);
 
-        setNama(listData[random].nama);
+        setName(listData[random].name);
         setRarity(listData[random].rarity);
         hasilFinal = listData[random].rarity;
       }
@@ -151,9 +151,9 @@ export default function CekBrainrot() {
                     }}
                   >
                     <input
-                      value={namaUser}
+                      value={inputName}
                       onChange={(e) =>
-                        setNamaUser(
+                        setInputName(
                           e.target.value
                         )
                       }
@@ -163,13 +163,13 @@ export default function CekBrainrot() {
                     <button
                       className={`absolute top-20 cursor-pointer transition-all text-white px-6 py-2 rounded-lg border-b-[4px] 
                     ${
-                      !namaUser
+                      !inputName
                         ? "bg-gray-400 border-gray-500"
                         : "bg-blue-500 border-blue-600 hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
                     }`}
-                      disabled={!namaUser} // Menambahkan validasi untuk mengaktifkan tombol hanya jika namaUser tidak kosong
+                      disabled={!inputName} // Menambahkan validasi untuk mengaktifkan tombol hanya jika inputName tidak kosong
                     >
-                      Button
+                      Check
                     </button>
                   </form>
                 </div>
@@ -191,20 +191,20 @@ export default function CekBrainrot() {
           <div className="flex flex-col w-72 bg-blue-500 items-center">
             <div>
               <p>
-                {namaUser
+                {inputName
                   .charAt(0)
                   .toUpperCase() +
-                  namaUser.slice(1)}
+                  inputName.slice(1)}
                 , kamu adalah:
               </p>
             </div>
             <div className="h-8">
               <p className="text-3xl">
-                {hasilNama.toUpperCase()}
+                {resultName.toUpperCase()}
               </p>
             </div>
             <div className="h-8">
-              <p>{hasilRarity}</p>
+              <p>{resultRarity}</p>
             </div>
             <motion.div
               variants={variants3}
