@@ -111,7 +111,7 @@ export default function ChekBrainrot() {
         initial="open"
         animate={isOpen ? "close" : "open"}
       >
-        <div className="px-3 flex flex-col">
+        <div className="relative px-3 flex flex-col items-center justify-center">
           <div className="px-8 sm:mt-12 xl:mt-20 flex items-center justify-center drop-shadow-lg pointer-events-none">
             <Image
               src="/img/logo.png"
@@ -131,30 +131,23 @@ export default function ChekBrainrot() {
             </a>
           </div>
 
-          <div className="relative w-full">
-            <div className="w-full flex justify-center z-[-1] bg-blue-200">
-              <Image
-                src="/img/box.png"
-                alt="logo"
-                width={400}
-                height={400}
-                className="pointer-events-none"
-              />
-            </div>
-
-            <div className="absolute inset-0 mt-6 mb-6 flex flex-col items-center">
-              <div className="mx-5">
-                <div className="max-w-[20rem] max-h-[10rem] sm:p-3 xl:p-3 sm:text-[0.8rem] xl:text-[1rem] text-center mt-1">
-                  Tools ini akan mendeteksi namamu
-                  kemudian mengkalkulasikan
-                  seberapa brainrot dan banyak
-                  aura yang kamu punya fr fr no
-                  cap!
+          {/* BORDER STROKE */}
+          <div className="bg-black p-1 rounded-[1.3rem] drop-shadow-3xl">
+            {/* CONTENT */}
+            <div className="pb-9 relative rounded-t-3xl rounded-b-2xl bg-gradient-to-t from-[#4d739e] to-[#89a4c7] drop-shadow-xl">
+              <div className="sm:p-3 md:p-6 rounded-2xl sm:w-[80vw] md:w-[40rem]   bg-gradient-to-t from-[#6899d2] to-[#a9c7ed]">
+                <div className="mb-10 bg-white sm:p-3 md:p-4 rounded-2xl border-b-4 border-r-4 border-gray-300 shadow-md">
+                  <p className="sm:text-[0.7rem] xl:text-[1rem] text-center">
+                    Tools ini akan mendeteksi
+                    namamu kemudian
+                    mengkalkulasikan seberapa
+                    brainrot dan banyak aura yang
+                    kamu punya fr fr no cap!
+                  </p>
                 </div>
 
-                {/* INPUT */}
                 <div>
-                  <div className="mt-9 mb-2 sm:text-sm md:text-2xl font-semibold text-center">
+                  <div className="mb-4 sm:text-sm md:text-2xl font-semibold text-center">
                     Masukkan Namamu
                   </div>
                   <form
@@ -189,6 +182,7 @@ export default function ChekBrainrot() {
                   </form>
                 </div>
               </div>
+              <div className="relative flex items-center justify-center"></div>
             </div>
           </div>
         </div>
