@@ -1,9 +1,17 @@
-import TextStyle from "../../components/textstyle";
+import style from "@/components/css/loading.module.css";
 
-export default function Home() {
+export default function loading() {
   return (
-    <main className="min-h-[100vh] flex items-center justify-center">
-      <TextStyle nameText=" Example Texst " />
-    </main>
+    <>
+      <div className="min-w-full min-h-[100vh] flex items-center justify-center">
+        <section className={style.dotscontainer}>
+          <div className={style.dot}></div>
+          <div className={style.dot}></div>
+          <div className={style.dot}></div>
+          <div className={style.dot}></div>
+          <div className={style.dot}></div>
+        </section>
+      </div>
+    </>
   );
 }
