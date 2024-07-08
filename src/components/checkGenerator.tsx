@@ -123,72 +123,85 @@ export default function ChekBrainrot() {
           <div className="pointer-events-none text-center sm:text-sm md:text-xl mb-8">
             Made by{" "}
             <a
-              className="pointer-events-auto"
+              className="pointer-events-auto hover:text-blue-600 hover:font-semibold ease-out duration-300"
               href="https://github.com/SirGhazian/"
               target="_blank"
             >
               @SirGhazian
             </a>
           </div>
+        </div>
 
-          <div className="relative w-full">
-            <div className="w-full flex justify-center z-[-1] bg-blue-200">
-              <Image
-                src="/img/box.png"
-                alt="logo"
-                width={400}
-                height={400}
-                className="pointer-events-none"
-              />
+        <div className="flex justify-center">
+          <div className="relative mx-6 w-[29rem] sm:aspect-[1500/1349] md:aspect-[1500/1142] flex justify-center">
+            <Image
+              src="/img/box_desktop.png"
+              alt="logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              className="absolute pointer-events-none z-[-1] sm:collapse md:visible drop-shadow-4xl"
+            />
+
+            <Image
+              src="/img/box_mobile.png"
+              alt="logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              className="absolute pointer-events-none z-[-1] sm:visible md:collapse"
+            />
+
+            <div className="absolute w-[80%] h-[23.5%] mt-[8%] p-2 flex items-center justify-center">
+              <p className="sm:text-[0.65rem] md:text-[1rem] xl:text-base text-center">
+                Tools ini akan mendeteksi namamu
+                kemudian mengkalkulasikan seberapa
+                brainrot dan banyak aura yang kamu
+                punya fr fr no cap!
+              </p>
             </div>
 
-            <div className="absolute inset-0 mt-6 mb-6 flex flex-col items-center">
-              <div className="mx-5">
-                <div className="max-w-[20rem] max-h-[10rem] sm:p-3 xl:p-3 sm:text-[0.8rem] xl:text-[1rem] text-center mt-1">
-                  Tools ini akan mendeteksi namamu
-                  kemudian mengkalkulasikan
-                  seberapa brainrot dan banyak
-                  aura yang kamu punya fr fr no
-                  cap!
-                </div>
-
-                {/* INPUT */}
-                <div>
-                  <div className="mt-9 mb-2 sm:text-sm md:text-2xl font-semibold text-center">
-                    Masukkan Namamu
-                  </div>
-                  <form
-                    className="relative mb-6 flex flex-col items-center justify-center"
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      randomList();
-                      setIsOpen(true);
-                    }}
-                  >
-                    <input
-                      value={inputName}
-                      onChange={(e) =>
-                        setInputName(
-                          e.target.value
-                        )
-                      }
-                      className="input rounded-full px-8 py-3 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-500 shadow-md"
-                      placeholder="Slamet Kopling"
-                    />
-                    <button
-                      className={`absolute top-20 cursor-pointer transition-all text-white px-6 py-2 rounded-lg border-b-[4px] 
+            {/* INPUT */}
+            <div className="absolute mt-[33%] w-full h-[60%]">
+              <div className="sm:mt-4 md:mt-0 md:text-lg font-semibold text-center">
+                Masukkan Namamu
+              </div>
+              <form
+                className="mt-2 flex flex-col items-center justify-center"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  randomList();
+                  setIsOpen(true);
+                }}
+              >
+                <input
+                  value={inputName}
+                  onChange={(e) =>
+                    setInputName(e.target.value)
+                  }
+                  className="sm:mt-1 md:mt-2 input rounded-full sm:px-5 md:px-8 sm:py-2 md:py-3 border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-500 shadow-md"
+                  placeholder="Slamet Kopling"
+                />
+                <button
+                  className={`mt-4 cursor-pointer transition-all text-white px-10 py-2 rounded-2xl border-b-[4px] 
                     ${
                       !inputName
                         ? "bg-gray-400 border-gray-500"
                         : "bg-blue-500 border-blue-600 hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
                     }`}
-                      disabled={!inputName} // Menambahkan validasi untuk mengaktifkan tombol hanya jika inputName tidak kosong
-                    >
-                      Check
-                    </button>
-                  </form>
-                </div>
-              </div>
+                  disabled={!inputName} // Menambahkan validasi untuk mengaktifkan tombol hanya jika inputName tidak kosong
+                >
+                  Check
+                </button>
+              </form>
             </div>
           </div>
         </div>

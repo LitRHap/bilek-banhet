@@ -9,13 +9,14 @@ const config: Config = {
   theme: {
     screens: {
       sm: "300px",
-      md: "768px",
+      md: "680px",
       lg: "1024px",
       xl: "1280px",
     },
     extend: {
       dropShadow: {
         "3xl": "2px 0px 0px rgba(0, 0, 0, 5)",
+        "4xl": "0px 15px 15px rgba(0, 0, 0, 0.4)",
       },
     },
   },
