@@ -1,11 +1,12 @@
 // import CheckBrainrot from "../components/checkGenerator";
 import dynamic from "next/dynamic";
+import Loading from "./loading";
 
 const CheckBrainrot = dynamic(
   () => import("../components/checkGenerator"),
   {
     ssr: false,
-    loading: () => <p>Loading...</p>,
+    loading: () => <Loading />,
   }
 );
 

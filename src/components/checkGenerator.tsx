@@ -139,7 +139,7 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100vw"
+              sizes="100"
               style={{
                 width: "100%",
                 height: "auto",
@@ -152,7 +152,7 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100vw"
+              sizes="100"
               style={{
                 width: "100%",
                 height: "auto",
@@ -212,7 +212,7 @@ export default function CheckBrainrot() {
         variants={variants2}
         initial="close"
         animate={isOpen ? "open" : "close"}
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 1 }}
       >
         <div className="flex items-center justify-center h-[100vh]">
           <div className="relative w-[29rem] aspect-[1414/1075] mx-6">
@@ -221,7 +221,7 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100vw"
+              sizes="100"
               style={{
                 width: "100%",
                 height: "auto",
