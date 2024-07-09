@@ -33,10 +33,10 @@ export default function Loading() {
           </div>
 
           <div className="absolute mt-[26%] w-[100%] h-[27%] flex items-center justify-center text-4xl font-bold">
-            <TextStyle nameText="SANTOS" />
+            <TextStyle nameText="GYATT LEVEL 100" />
           </div>
 
-          <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center text-xl font-bold">
+          <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center text-xl font-bold ">
             <p>0000 aura</p>
           </div>
 

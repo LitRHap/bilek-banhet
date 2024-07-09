@@ -248,13 +248,14 @@ export default function CheckBrainrot() {
               </div>
             </div>
 
-            <div className="absolute mt-[26%] w-[100%] h-[27%] flex items-center justify-center text-4xl font-bold">
+            <div className="absolute mt-[26%] w-[100%] h-[27%] flex items-center justify-center font-bold">
               <TextStyle
                 nameText={resultName.toUpperCase()}
+                auraText={parseFloat(resultAura)}
               />
             </div>
 
-            <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center text-xl font-bold">
+            <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center font-bold">
               <p>{resultAura}</p>
             </div>
 
