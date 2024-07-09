@@ -214,59 +214,40 @@ export default function CheckBrainrot() {
         animate={isOpen ? "open" : "close"}
         transition={{ delay: 0.8 }}
       >
-        <div className="flex items-center justify-center h-[100vh]">
-          <div className="relative w-[29rem] aspect-[1414/1075] mx-6">
-            <Image
-              src="/img/box_result.png"
-              alt="logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-              className="absolute z-[-1] drop-shadow-4xl"
-            />
-
-            <div className="absolute mt-[1.5%] w-[100%] h-[30%] flex items-center justify-center">
-              <div className="flex flex-col text-center">
-                <p className="text-2xl font-bold">
-                  {inputName
-                    .charAt(0)
-                    .toUpperCase() +
-                    inputName.slice(1)}
-                  ,
-                </p>
-                <p className="text-xl">
-                  Kamu Adalah:{" "}
-                </p>
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col w-72 bg-blue-500 items-center">
+            <div>
+              <p>
+                {inputName
+                  .charAt(0)
+                  .toUpperCase() +
+                  inputName.slice(1)}
+                , kamu adalah:
+              </p>
+            </div>
+            <div className="h-8  mb-10">
+              <div className="text-3xl">
+                <TextStyle
+                  nameText={resultName.toUpperCase()}
+                />
               </div>
             </div>
-
-            <div className="absolute mt-[21%] w-[100%] h-[40%] flex items-center justify-center text-4xl font-bold">
-              <TextStyle
-                nameText={resultName.toUpperCase()}
-              />
+            <div className="h-8">
+              <p>{resultAura}</p>
             </div>
-
-            <div className="absolute mt-[51%] w-[100%] h-[25%] flex items-center justify-center">
-              <motion.div
-                variants={variants3}
-                initial="slideStart"
-                animate={
-                  isOpen
-                    ? "slideEnd"
-                    : "slideStart"
-                }
-                transition={{
-                  duration: 0.5,
-                  delay: 6.5,
-                }}
-              >
-                <a href="/">Ulangi</a>
-              </motion.div>
-            </div>
+            <motion.div
+              variants={variants3}
+              initial="slideStart"
+              animate={
+                isOpen ? "slideEnd" : "slideStart"
+              }
+              transition={{
+                duration: 0.5,
+                delay: 6.5,
+              }}
+            >
+              <a href="/">Ulangi</a>
+            </motion.div>
           </div>
         </div>
       </motion.div>

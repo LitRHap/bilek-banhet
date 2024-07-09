@@ -5,6 +5,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import AppBgImg from "@/components/background";
+import Navbar from "@/components/navbar";
 
 const lexend = Lexend({ subsets: ["latin"] });
 const bangers = Bangers({
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${lexend.className} ${bangers.variable}`}
       >
+        <Navbar />
         <AppBgImg />
         {children}
       </body>

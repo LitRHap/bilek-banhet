@@ -5,3 +5,7 @@
 .bangers {
   font-family: var(--font-bangers);
 }
+
+body {
+  @apply text-primary;
+}
