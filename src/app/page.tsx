@@ -1,5 +1,13 @@
-"use client";
-import CheckBrainrot from "../components/checkGenerator";
+// import CheckBrainrot from "../components/checkGenerator";
+import dynamic from "next/dynamic";
+
+const CheckBrainrot = dynamic(
+  () => import("../components/checkGenerator"),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 export default function Home() {
   return (
