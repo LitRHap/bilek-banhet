@@ -118,6 +118,7 @@ export default function CheckBrainrot() {
               alt="logo"
               width={400}
               height={400}
+              priority
             />
           </div>
           <div className="pointer-events-none text-center sm:text-sm md:text-xl mb-8">
@@ -139,7 +140,8 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100"
+              priority
+              sizes="100vh"
               style={{
                 width: "100%",
                 height: "auto",
@@ -152,7 +154,8 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100"
+              priority
+              sizes="100vh"
               style={{
                 width: "100%",
                 height: "auto",
@@ -221,7 +224,8 @@ export default function CheckBrainrot() {
               alt="logo"
               width={0}
               height={0}
-              sizes="100"
+              priority
+              sizes="100vw"
               style={{
                 width: "100%",
                 height: "auto",
