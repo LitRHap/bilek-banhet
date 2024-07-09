@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import {
-  Lexend,
-  Bangers,
-} from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import AppBgImg from "@/components/background";
 import Navbar from "@/components/navbar";
 
 const lexend = Lexend({ subsets: ["latin"] });
-const bangers = Bangers({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-bangers",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,9 +22,7 @@ export default function RootLayout({
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no"
       ></meta>
-      <body
-        className={`${lexend.className} ${bangers.variable}`}
-      >
+      <body className={lexend.className}>
         <Navbar />
         <AppBgImg />
         {children}

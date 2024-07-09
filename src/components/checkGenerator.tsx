@@ -233,7 +233,7 @@ export default function CheckBrainrot() {
               className="absolute z-[-1] drop-shadow-4xl"
             />
 
-            <div className="absolute mt-[1.5%] w-[100%] h-[30%] flex items-center justify-center">
+            <div className="absolute mt-[2%] w-[100%] h-[30%] flex items-center justify-center">
               <div className="flex flex-col text-center">
                 <p className="text-2xl font-bold">
                   {inputName
@@ -248,29 +248,36 @@ export default function CheckBrainrot() {
               </div>
             </div>
 
-            <div className="absolute mt-[21%] w-[100%] h-[40%] flex items-center justify-center text-4xl font-bold">
+            <div className="absolute mt-[26%] w-[100%] h-[27%] flex items-center justify-center text-4xl font-bold">
               <TextStyle
                 nameText={resultName.toUpperCase()}
               />
             </div>
 
-            <div className="absolute mt-[51%] w-[100%] h-[25%] flex items-center justify-center">
-              <motion.div
-                variants={variants3}
-                initial="slideStart"
-                animate={
-                  isOpen
-                    ? "slideEnd"
-                    : "slideStart"
-                }
-                transition={{
-                  duration: 0.5,
-                  delay: 6.5,
-                }}
-              >
-                <a href="/">Ulangi</a>
-              </motion.div>
+            <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center text-xl font-bold">
+              <p>{resultAura}</p>
             </div>
+
+            <motion.div
+              variants={variants3}
+              initial="slideStart"
+              animate={
+                isOpen ? "slideEnd" : "slideStart"
+              }
+              transition={{
+                duration: 0.5,
+                delay: 6.5,
+              }}
+            >
+              <div className="absolute mt-[55.5%] w-[100%] h-[25%] flex items-center justify-center hover:font-semibold ease-out duration-300">
+                <a href="/">
+                  <span className="mr-[0.3rem]">
+                    Ulangi
+                  </span>
+                  <i className="text-xs fa-solid fa-rotate-right"></i>
+                </a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
