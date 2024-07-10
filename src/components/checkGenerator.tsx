@@ -239,7 +239,7 @@ export default function CheckBrainrot() {
                   {inputName
                     .charAt(0)
                     .toUpperCase() +
-                    inputName.slice(1)}
+                    inputName.slice(1).trim()}
                   ,
                 </p>
                 <p className="sm:text-lg md:text-xl">
@@ -270,7 +270,7 @@ export default function CheckBrainrot() {
                 delay: 6,
               }}
             >
-              <div className="absolute mt-[55.5%] w-[100%] h-[25%] flex items-center justify-center hover:font-semibold ease-out duration-300">
+              <div className="absolute sm:mt-[55%] md:mt-[55.5%] w-[100%] h-[25%] flex items-center justify-center hover:font-semibold ease-out duration-300 sm:text-sm md:text-base">
                 <a href="/">
                   <span className="mr-[0.3rem]">
                     Ulangi
