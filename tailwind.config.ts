@@ -22,6 +22,9 @@ const config: Config = {
         "4xl": "0px 15px 15px rgba(0, 0, 0, 0.4)",
         glow: "0px 5px 5px rgba(255, 165, 0, 0.4)",
       },
+      animation: {
+        "spin-slow": "spin 4s linear infinite",
+      },
     },
   },
   plugins: [],

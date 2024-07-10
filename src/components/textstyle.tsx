@@ -1,3 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 export default function TextStyle({
   nameText,
   auraText,
@@ -54,16 +58,47 @@ export default function TextStyle({
 
       <div className="relative flex">
         <h1
-          className={`p-2 sm:text-2xl md:text-4xl tracking-[0.1rem] bg-gradient-to-t ${colorText}   inline-block text-transparent bg-clip-text z-20`}
+          className={`p-2 z-10 sm:text-2xl md:text-4xl tracking-[0.1rem] bg-gradient-to-t ${colorText}   inline-block text-transparent bg-clip-text z-20`}
         >
           {nameText}
         </h1>
         <h1
-          className={`absolute p-2 sm:text-2xl md:text-4xl tracking-[0.1rem] textOutline ${colorText1}`}
+          className={`absolute z-[9] p-2 sm:text-2xl md:text-4xl tracking-[0.1rem] textOutline ${colorText1}`}
         >
           {nameText}
         </h1>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={
+          auraText >= 1000
+            ? { opacity: 1 }
+            : { opacity: 0 }
+        }
+        transition={{
+          delay: 0.5,
+        }}
+        className={`${
+          auraText >= 1000
+            ? "visible"
+            : "collapse"
+        } absolute w-[100%] h-[100%] flex items-center scale-x-[.8] scale-y-[.2]`}
+      >
+        <Image
+          src="/img/glow_result.png"
+          alt="glow"
+          className="animate-spin-slow"
+          width={0}
+          height={0}
+          priority
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
+      </motion.div>
     </>
   );
 }

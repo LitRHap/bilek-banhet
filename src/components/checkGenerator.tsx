@@ -235,14 +235,14 @@ export default function CheckBrainrot() {
 
             <div className="absolute mt-[2%] w-[100%] h-[30%] flex items-center justify-center">
               <div className="flex flex-col text-center">
-                <p className="text-2xl font-bold">
+                <p className="sm:text-xl md:text-2xl font-bold">
                   {inputName
                     .charAt(0)
                     .toUpperCase() +
                     inputName.slice(1)}
                   ,
                 </p>
-                <p className="text-xl">
+                <p className="sm:text-lg md:text-xl">
                   Kamu Adalah:{" "}
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default function CheckBrainrot() {
               />
             </div>
 
-            <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center font-bold">
+            <div className="absolute mt-[47%] w-[100%] h-[13%] flex items-center justify-center font-bold sm:text-base md:text-xl">
               <p>{resultAura}</p>
             </div>
 
@@ -267,7 +267,7 @@ export default function CheckBrainrot() {
               }
               transition={{
                 duration: 0.5,
-                delay: 6.5,
+                delay: 6,
               }}
             >
               <div className="absolute mt-[55.5%] w-[100%] h-[25%] flex items-center justify-center hover:font-semibold ease-out duration-300">
