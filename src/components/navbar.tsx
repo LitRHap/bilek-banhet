@@ -1,4 +1,8 @@
-export default function Navbar() {
+export default function Navbar({
+  pageType,
+}: {
+  pageType: string;
+}) {
   return (
     <>
       <link
@@ -10,9 +14,11 @@ export default function Navbar() {
         <i className="fa-solid fa-arrow-right mr-3 group-hover:mr-2 ease-in-out duration-300" />
         <a
           className="group-hover:font-semibold ease-in-out duration-300"
-          href="/about"
+          href={
+            pageType === "home" ? "/about" : "/"
+          }
         >
-          About
+          {pageType == "home" ? " About" : "Back"}
         </a>
       </div>
     </>

@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import Loading from "./loading";
 import PreLoader from "@/components/preloader";
+import Navbar from "@/components/navbar";
 
 const CheckBrainrot = dynamic(
   () => import("../components/checkGenerator"),
@@ -14,6 +15,7 @@ const CheckBrainrot = dynamic(
 export default function Home() {
   return (
     <>
+      <Navbar pageType={"home"} />
       <PreLoader />
       <main className="max-h-[100vh] w-full">
         <CheckBrainrot />

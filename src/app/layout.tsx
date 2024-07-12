@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import AppBgImg from "@/components/background";
-import Navbar from "@/components/navbar";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -23,7 +22,6 @@ export default function RootLayout({
         content="width=device-width, initial-scale=1.0, user-scalable=no"
       ></meta>
       <body className={lexend.className}>
-        <Navbar />
         <AppBgImg />
         {children}
       </body>
