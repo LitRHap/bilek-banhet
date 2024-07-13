@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import Loading from "./loading";
 import PreLoader from "@/components/preloader";
 import Navbar from "@/components/navbar";
-
 const CheckBrainrot = dynamic(
   () => import("../components/checkGenerator"),
   {
