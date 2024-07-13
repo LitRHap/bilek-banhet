@@ -15,9 +15,9 @@ const CheckBrainrot = dynamic(
 export default function Home() {
   return (
     <>
-      <Navbar pageType={"home"} />
       <PreLoader />
       <main className="max-h-[100vh] w-full">
+        <Navbar pageType={"home"} />
         <CheckBrainrot />
       </main>
     </>
