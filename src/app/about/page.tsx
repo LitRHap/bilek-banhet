@@ -18,7 +18,7 @@ export default function UserProfileAbout() {
           <div className="w-[321px] h-[115.97px] left-[17px] top-[58.82px] text-gray-500 text-sm font-medium p-4">
             Projek ini dibuat sebagai bentuk
             candaan belaka dan merupakan bagian
-            dari pembelajaran saya dalam Next.js.
+            dari pembelajaran saya dalam NextJs.
             Jika Anda menikmati projek ini, jangan
             ragu untuk memberikan ⭐ pada
             repository ini. Terima kasih atas
