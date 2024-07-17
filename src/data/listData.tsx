@@ -1,6 +1,7 @@
 const listData = [
   // A Tier
   { name: "sigma", aura: "+9999" },
+  { name: "looksmaxing", aura: "+9999" },
   { name: "skibidi sigma", aura: "+9999" },
   { name: "gyatt level 100", aura: "+9999" },
   { name: "mewing king", aura: "+9000" },
@@ -8,7 +9,8 @@ const listData = [
 
   // B Tier
   { name: "bocil windah", aura: "+500" },
-  { name: "bintang sigma", aura: "+150" },
+  { name: "alpha", aura: "+250" },
+  { name: "bintang skibidi", aura: "+150" },
   { name: "ohio sigma", aura: "+150" },
   { name: "ishowspeed", aura: "+150" },
   { name: "rusdi ngawi", aura: "+50" },
