@@ -25,11 +25,13 @@ export default function CheckBrainrot() {
       "/audio/tier_bad.WAV", // 1
       "/audio/tier_good.WAV", // 2
       "/audio/tier_best.WAV", // 3
+      "/audio/button_sfx.WAV", // 4
     ];
 
     const audio = new Audio(
       audioFiles[indexSong]
     );
+    audio.preload = "auto";
 
     if (indexSong == 0) {
       audio.volume = 0.3;
@@ -194,6 +196,7 @@ export default function CheckBrainrot() {
                   placeholder="Slamet Kopling"
                 />
                 <button
+                  onClick={() => playSFX(4)}
                   className={`mt-4 cursor-pointer transition-all text-white px-10 py-2 rounded-2xl border-b-[4px] drop-shadow-md 
                     ${
                       !inputName
