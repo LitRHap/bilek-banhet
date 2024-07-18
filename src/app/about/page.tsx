@@ -14,7 +14,7 @@ export default function UserProfileAbout() {
           </div>
         </div>
 
-        <div className="mt-4 w-[335px] h-[230px] left-0 top-0 rounded-tl-[14px] rounded-tr-[14px] rounded-bl-[14px] rounded-br-[96px] bg-white/20 sm:backdrop-blur-sm md:backdrop-blur-md border-white border-2">
+        <div className="mt-4 w-[335px] h-[230px] left-0 top-0 rounded-tl-[14px] rounded-tr-[14px] rounded-bl-[14px] rounded-br-[96px] bg-white/20 sm:backdrop-blur-[8px] md:backdrop-blur-md border-white border-2">
           <div className="w-[321px] h-[115.97px] left-[17px] top-[58.82px] text-gray-500 text-sm font-medium p-4">
             Projek ini dibuat sebagai bentuk jokes
             belaka dan merupakan bagian dari
