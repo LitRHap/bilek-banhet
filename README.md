@@ -9,6 +9,10 @@ Tools ini akan mendeteksi namamu dan mengkalkulasikan seberapa brainrot dan bera
 
 Live demo: https://brainrots.vercel.app/
 
+<img src="https://github.com/user-attachments/assets/befa0191-6ef7-45e9-8268-e6e70a482320" width="750"/>
+
+</br>
+
 ## 【 Cara Kerja 】
 - Masukkan Namamu: Ketik nama kamu di kotak ya bosku.
 - Dapatkan Hasil: Klik "Check" untuk mulai generator cek brainrot.
