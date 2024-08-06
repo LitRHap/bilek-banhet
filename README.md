@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img src="https://github.com/user-attachments/assets/592745dd-7569-4cdc-a4fa-014f4adf7bcb" width="450"/>
+</div>
 
-## Getting Started
+<img src="https://github.com/user-attachments/assets/69eae73b-9f1f-4c9c-aaf7-6ca328c44ac7" width="100%" height="2px"/>
+<p/>
 
-First, run the development server:
+Tools ini akan mendeteksi namamu dan mengkalkulasikan seberapa brainrot dan berapa banyak aura yang kamu punya frfr no cap. Ini rill 100% no hoax source: trust me bro.
 
-```bash
+Live demo: https://brainrots.vercel.app/
+
+## 【 Cara Kerja 】
+- Masukkan Namamu: Ketik nama kamu di kotak ya bosku.
+- Dapatkan Hasil: Klik "Check" untuk mulai generator cek brainrot.
+- Cek Auramu: Akan ada rating tiap brainrot. Kalau kamu sigma mewing pasti dapat aura diatas 1000.
+
+</br>
+
+## 【 Cara Clone 】
+1. Clone Repo
+```
+git clone https://github.com/SirGhazian/brainrot-calculator.git
+```
+2. Masuk ke direktori
+```
+cd brainrot-calculator
+```
+3. Install dependencies
+```
+npm install
+```
+4. Jalankan aplikasi
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 【 About 】
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Untuk bantuan dan pertanyaan, silahkan hubungi sosial media saya:
+<img align="right" width="100" src="https://github.com/SirGhazian/praktikum-struktur-data-UNP/assets/142916107/b140fe43-3a57-4295-8493-79d929a5e3b0">
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ghazian_tza)
+-   [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCIp_064wQ8RqNSEy1asx_4w)
