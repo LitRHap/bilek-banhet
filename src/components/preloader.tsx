@@ -18,7 +18,7 @@ export default function PreLoader() {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ delay: 0.4, duration: 0.5 }}
-        className="absolute flex items-center w-screen h-screen bg-white z-40 pointer-events-none"
+        className="absolute flex items-center w-screen h-screen max-w-screen max-h-screen bg-white z-40 pointer-events-none"
       >
         <section className={style.dotscontainer}>
           <div className={style.dot}></div>
