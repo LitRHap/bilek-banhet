@@ -41,6 +41,15 @@ export default function CheckBrainrot() {
     audio.play();
   }
 
+  function hashInputName(inputName: string) {
+    let hash = 0;
+    for (let i = 0; i < inputName.length; i++) {
+        hash = (hash << 5) - hash + inputName.toUpperCase().charCodeAt(i); // Hash function
+        hash |= 0; // Convert to 32bit integer
+    }
+    return Math.abs(hash); // Return a positive hash
+  }
+
   // fungsi async
   async function randomList() {
     await new Promise((resolve) =>
@@ -83,6 +92,12 @@ export default function CheckBrainrot() {
           listData[random].aura
         );
       }
+      const finalVal = hashInputName(inputName) % listData.length
+      hasilFinal = Number(
+        listData[finalVal].aura
+      )
+      setName(listData[finalVal].name);
+      setAura(listData[finalVal].aura + " Aura");
 
       if (hasilFinal >= 1000) {
         // aura lebih dari 8000
