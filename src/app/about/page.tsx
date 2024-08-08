@@ -26,7 +26,7 @@ export default function UserProfileAbout() {
             <div className="mt-5 flex flex-row items-center w-full">
               <div className="w-[35%] h-[0.1rem] bg-gray-300" />
               <a
-                href="https://github.com/SirGhazian/"
+                href="https://github.com/LitRHap"
                 target="_blank"
                 className="mx-6 text-3xl text-gray-500 fa-brands fa-square-github"
               />
