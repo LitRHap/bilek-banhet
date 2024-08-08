@@ -142,10 +142,10 @@ export default function CheckBrainrot() {
             Made by{" "}
             <a
               className="pointer-events-auto hover:text-blue-600 hover:font-semibold ease-out duration-300"
-              href="https://github.com/SirGhazian/"
+              href="https://github.com/LitRHap"
               target="_blank"
             >
-              @SirGhazian
+              @LitRHap
             </a>
           </div>
         </div>
